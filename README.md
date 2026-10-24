@@ -1,5 +1,8 @@
 # SkyVille Wiki
 
+*Finalized commit for Vercel deployment.*
+
+
 A professional documentation site for the SkyVille Minecraft server.
 
 ## Features
