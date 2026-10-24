@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "decap-cms-app": "^3.17.1",
+    "fumadocs-core": "^16.17.8",
+    "fumadocs-mdx": "^15.4.10",
+    "fumadocs-ui": "^16.17.8",
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0"

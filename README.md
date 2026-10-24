@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkyVille Wiki
 
-## Getting Started
+A professional documentation site for the SkyVille Minecraft server.
 
-First, run the development server:
+## Features
+
+- GitBook‑style layout with a collapsible sidebar
+- Tailwind CSS styling (light & dark mode)
+- Markdown/MDX source files stored in `content/docs/`
+- **Decap CMS** admin UI at `/admin` for staff to edit the same Markdown files directly in the repository
+- Automatic deployment on Vercel whenever a change is pushed to GitHub
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build       # production build
+npm run lint        # linting
+npm run type-check  # TypeScript check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Adding or editing documentation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Edit an `.mdx` file under `content/docs/` and the dev server will hot‑reload.
+- To add a new page, create a new file with front‑matter (`title` & `description`).
+- The sidebar navigation mirrors the folder structure.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploying to Vercel
 
-## Learn More
+1. Create a GitHub repository and push this project.
+2. In Vercel, **Import Project** → select the repo → Vercel detects a Next.js app.
+3. Add the environment variables defined in `.env.example` (see below).
+4. Enable **Automatic GitHub Deployments**.
+5. After the first build, your site will be live at `https://<your‑project>.vercel.app`.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT © SkyVille
